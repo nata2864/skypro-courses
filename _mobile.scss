@@ -1,0 +1,103 @@
+@use 'variables';
+
+@media (max-width: 768px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .header {
+    &__left-logo {
+      display: none;
+    }
+
+    &__right-link {
+      display: none;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+  }
+
+  .button {
+    font-weight: variables.$font-weight-semibold;
+    font-size: variables.$font-size-max;
+    line-height: variables.$line-height-max;
+
+    &--small {
+      height: 40px;
+      padding: 4px 16px;
+    }
+
+    &--large {
+      height: 54px;
+      width: 240px;
+      padding: 4px 16px;
+    }
+  }
+
+  .top {
+    &__wrapper {
+      margin: 0 16px;
+      padding: 0 16px;
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content {
+      padding-top: 36px;
+
+      &__headline {
+        font-size: variables.$h3-font-size;
+        line-height: variables.$h4-line-height;
+      }
+
+      &__description {
+        font-size: variables.$font-size-medium;
+        line-height: variables.$line-height-min;
+        margin-bottom: 30px;
+      }
+
+      &__search,
+      &__icons {
+        display: none;
+      }
+    }
+  }
+
+  .courses-box {
+    margin-top: 54px;
+
+    &__name {
+      font-size: variables.$h4-font-size;
+      line-height: variables.$h4-line-height;
+    }
+
+    &__choice {
+      margin-top: 42px;
+      gap: 16px;
+    }
+
+    &__courses {
+      padding: 0 16px;
+      gap: 16px;
+    }
+
+    .course {
+      &__price-old {
+        font-size: variables.$font-size-medium;
+        line-height: variables.$line-height-medium;
+      }
+
+      &__price-new {
+        font-weight: variables.$font-weight-medium;
+        font-size: variables.$h6-font-size;
+        line-height: variables.$h6-line-height;
+      }
+    }
+  }
+}

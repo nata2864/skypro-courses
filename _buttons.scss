@@ -1,0 +1,59 @@
+@use 'variables';
+
+.button {
+  background-color: variables.$color-white;
+  color: variables.$color-text-infield;
+  font-family: variables.$font-secondary;
+  font-weight: variables.$font-weight-semibold;
+  font-size: variables.$font-size-max;
+  line-height: variables.$line-height-max;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background: variables.$color-pink;
+    color: variables.$color-white;
+  }
+
+  &--primary {
+    background: variables.$color-pink;
+    color: variables.$color-white;
+
+    &:hover {
+      background-color: variables.$color-white;
+      color: variables.$color-pink;
+      border-color: variables.$color-pink;
+    }
+
+    &:active {
+      background: variables.$color-pink-80;
+    }
+  }
+
+  &--secondary {
+    color: variables.$color-navy;
+    border-color: variables.$color-navy;
+
+    &:hover {
+      background-color: variables.$color-navy;
+      color: variables.$color-white;
+    }
+  }
+
+  &--small {
+    height: 48px;
+    padding: 8px 32px;
+  }
+
+  &--large {
+    width: 288px;
+    height: 60px;
+  }
+
+  &--tall {
+    padding: 12px 32px;
+    height: 56px;
+  }
+}

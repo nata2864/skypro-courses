@@ -1,0 +1,21 @@
+@use 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  color: variables.$color-navy;
+  font-family: variables.$font-primary;
+}

@@ -1,0 +1,221 @@
+@use "variables";
+@use "animations";
+@use "reset";
+@use "header";
+@use "buttons";
+
+
+.center {
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
+}
+
+.top {
+  &__wrapper {
+    margin: 0 40px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/background.jpg") center/cover no-repeat;
+    border-radius: 8px;
+    height: 748px;
+  }
+
+  .content {
+    max-width: 610px;
+    padding-top: 88px;
+
+    &__headline {
+      font-weight: variables.$font-weight-bold;
+      font-size: variables.$h2-font-size;
+      color: variables.$color-white;
+      line-height: variables.$h2-line-height;
+    }
+
+    &__description {
+      margin: 24px 0 66px;
+      color: variables.$color-white;
+      font-family: variables.$font-secondary;
+      font-weight: variables.$font-weight-regular;
+      font-size: variables.$font-size-max;
+      line-height: variables.$line-height-medium;
+    }
+
+    &__search {
+      position: relative;
+      width: 100%;
+
+      &-input {
+        width: 100%;
+        height: 80px;
+        padding-right: 40px;
+        border-radius: 8px;
+        border: 1px solid variables.$color-grey;
+
+        &::placeholder {
+          font-family: variables.$font-secondary;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 27px;
+          color: variables.$color-text-body;
+          padding-left: 56px;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+      }
+
+      &-button {
+        position: absolute;
+        right: 16px;
+        top: 12px;
+      }
+    }
+
+    &__icons {
+      margin-top: 56px;
+      display: flex;
+      gap: 48px;
+    }
+  }
+
+  .image__overlay {
+    margin-top: 64px;
+    width: 529px;
+    height: 683px;
+    border-radius: 8px;
+  }
+}
+
+.courses-box {
+  margin-top: 88px;
+  &__name {
+    font-weight: variables.$font-weight-bold;
+    font-size: variables.$h3-font-size;
+    color: variables.$color-navy;
+    line-height: variables.$h3-line-height;
+    text-align: center;
+  }
+
+  &__choice {
+    margin: 56px 0 8px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__courses {
+    display: flex;
+    justify-content: center;
+    gap: 24px 16px;
+    flex-wrap: wrap;
+    padding: 0 106px;
+    margin-top: 32px;
+  }
+
+  &__item {
+    width: 295px;
+    padding: 16px 16.05px 0 17px;
+
+    &:hover {
+      animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        forwards;
+    }
+
+    .course {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+
+      &__img {
+        width: 100%;
+        padding-bottom: 27px;
+      }
+
+      &__btn {
+        position: absolute;
+        top: 187px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(69, 134, 214, 1);
+        color: variables.$color-white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        width: 144px;
+        height: 32px;
+        font-size: variables.$font-size-min;
+        line-height: variables.$line-height-min;
+        cursor: pointer;
+      }
+
+      &__price {
+        display: flex;
+        align-items: center;
+        gap: 8.08px;
+        margin-bottom: 19px;
+
+        &-old {
+          text-decoration: line-through;
+          font-family: variables.$font-secondary;
+          font-weight: variables.$font-weight-regular;
+          font-size: variables.$font-size-max;
+          line-height: variables.$line-height-medium;
+        }
+
+        &-new {
+          font-weight: variables.$font-weight-medium;
+          font-size: variables.$h5-font-size;
+          line-height: variables.$h5-line-height;
+        }
+      }
+
+      &__name {
+        font-weight: variables.$font-weight-medium;
+        font-size: variables.$h6-font-size;
+        line-height: variables.$h6-line-height;
+      }
+
+      &__owner {
+        font-family: variables.$font-secondary;
+        font-weight: variables.$font-weight-semibold;
+        font-size: variables.$font-size-min;
+        color: variables.$color-pink;
+        line-height: variables.$line-height-min;
+      }
+
+      &__rating {
+        padding: 8px 0 16px;
+        display: flex;
+        gap: 8.03px;
+
+        &-count {
+          font-family: variables.$font-secondary;
+          font-weight: variables.$font-weight-semibold;
+          font-size: variables.$font-size-medium;
+          line-height: variables.$line-height-min;
+          color: variables.$color-text-body;
+        }
+      }
+    }
+  }
+
+  .load-more-wrapper {
+    margin: 56px 0 120px;
+    text-align: center;
+  }
+}
+
+
+@import "tablet";
+@import "mobile";
