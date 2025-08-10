@@ -5,6 +5,7 @@
 @use "buttons";
 
 
+
 .center {
   padding-left: calc(50% - 720px);
   padding-right: calc(50% - 720px);
@@ -16,7 +17,7 @@
     padding: 0 64px;
     display: flex;
     justify-content: space-between;
-    background: url("../img/background.jpg") center/cover no-repeat;
+    background: url("./img/background.jpg") center/cover no-repeat;
     border-radius: 8px;
     height: 748px;
   }
@@ -219,3 +220,4 @@
 
 @import "tablet";
 @import "mobile";
+
